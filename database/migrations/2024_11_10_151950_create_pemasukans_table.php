@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->foreignId('kategori_id');
-            $table->dateTime('tanggal');
+            $table->date('tanggal');
             $table->integer('jumlah');
             $table->timestamps();
         });

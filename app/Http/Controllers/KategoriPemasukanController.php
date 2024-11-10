@@ -32,7 +32,7 @@ class KategoriPemasukanController extends Controller
 
     public function update(Request $request, string $id){
         $validated = $request->validate([
-            'kategori_pengeluaran' => 'required'
+            'kategori_pemasukan' => 'required'
         ]);
         KategoriPemasukan::where('id',$id)->update($validated);
         return redirect('/kpemasukan')-> with('pesan', 'Data berhasil diubah');

@@ -14,7 +14,7 @@
                 Pemasukan
             </button>
             <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">Pemasukan Harian</a></li>
+                <li><a class="dropdown-item" href="{{ url('/pemasukan') }}">Pemasukan Harian</a></li>
                 <li><a class="dropdown-item" href="#">Pemasukan Bulanan</a></li>
                 <li><a class="dropdown-item" href="#">Laporan Pemasukan</a></li>
             </ul>
