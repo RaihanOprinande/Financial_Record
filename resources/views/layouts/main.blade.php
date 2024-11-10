@@ -11,6 +11,7 @@
 
     <style>
         .content {
+            margin-left: 180px;
             padding-top: 60px;
             padding-bottom: 50px;
 
@@ -59,7 +60,7 @@
 
     <!-- CONTENT -->
     <main>
-        <div class="content container-fluid">
+        <div class="content container">
                 @yield('content')
             </div>
     </main>

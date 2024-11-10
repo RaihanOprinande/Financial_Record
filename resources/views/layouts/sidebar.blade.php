@@ -30,6 +30,17 @@
                 <li><a class="dropdown-item" href="#">Laporan Pemasukan</a></li>
             </ul>
         </li>
+        <li class="nav-item dropdown">
+            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-file-earmark-arrow-down"></i>
+                Kategori
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="{{ url('/kpemasukan') }}">Kategori Pemasukan</a></li>
+                <li><a class="dropdown-item" href="#">Kategori Pengeluaran</a></li>
+
+            </ul>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url('/dsn-index') }}">
             <span data-feather="shopping-cart"></span>

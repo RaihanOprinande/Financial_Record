@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KategoriPemasukanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Models\KategoriPemasukan;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -16,4 +18,6 @@ Route::get('/dashboard',[DashboardController::class,'index'])-> middleware('auth
 Route::post('/login',[LoginController::class,'authenticate']);
 Route::post('/register',[RegisterController::class,'store']);
 Route::post('/logout',[LoginController::class,'logout']);
+
+Route::resource('/kpemasukan',KategoriPemasukanController::class)->middleware('auth');
 
