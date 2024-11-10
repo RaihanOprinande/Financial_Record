@@ -9,7 +9,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <style>
+    {{-- <style>
         main>.container {
             /* padding: 60px 15px 0; */
         }
@@ -131,11 +131,11 @@
         }
 
 
-    </style>
+    </style> --}}
 
 </head>
 
-<body class="d-flex flex-column h-100">
+<body>
 
 
     @include('layouts.header')
@@ -143,8 +143,8 @@
 
     @include('layouts.sidebar')
 
-    <!-- Begin page content -->
-    <main class="flex-shrink-0 content">
+    <!-- CONTENT -->
+    <main>
         <div class="container-fluid">
                 @yield('content')
             </div>
