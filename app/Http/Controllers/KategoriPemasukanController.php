@@ -9,12 +9,12 @@ class KategoriPemasukanController extends Controller
 {
     public function index(){
         $Kpemasukan = KategoriPemasukan::latest()->paginate(10);
-        return view('Features.Kategori.kategoriPemasukan',['kategoris'=>$Kpemasukan]);
+        return view('Features.KategoriPemasukan.kategoriPemasukan',['kategoris'=>$Kpemasukan]);
     }
 
     public function create(){
         $addkategori = KategoriPemasukan::all();
-        return view('Features.kategori.create',['addkategori' => $addkategori]);
+        return view('Features.kategoriPemasukan.create',['addkategori' => $addkategori]);
     }
 
     public function store(Request $request){
@@ -27,12 +27,12 @@ class KategoriPemasukanController extends Controller
 
     public function edit(string $id){
         $editkategori = KategoriPemasukan::find($id);
-        return view('Features.kategori.edit',compact('editkategori'));
+        return view('Features.kategoriPemasukan.edit',compact('editkategori'));
     }
 
     public function update(Request $request, string $id){
         $validated = $request->validate([
-            'kategori_pemasukan' => 'required'
+            'kategori_pengeluaran' => 'required'
         ]);
         KategoriPemasukan::where('id',$id)->update($validated);
         return redirect('/kpemasukan')-> with('pesan', 'Data berhasil diubah');

@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KategoriPemasukanController;
+use App\Http\Controllers\KategoriPengeluaranController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Models\KategoriPemasukan;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,4 +20,5 @@ Route::post('/register',[RegisterController::class,'store']);
 Route::post('/logout',[LoginController::class,'logout']);
 
 Route::resource('/kpemasukan',KategoriPemasukanController::class)->middleware('auth');
+Route::resource('/kpengeluaran',KategoriPengeluaranController::class)->middleware('auth');
 

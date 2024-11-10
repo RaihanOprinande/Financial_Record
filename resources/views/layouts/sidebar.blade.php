@@ -37,7 +37,7 @@
             </button>
             <ul class="dropdown-menu dropdown-menu-dark">
                 <li><a class="dropdown-item" href="{{ url('/kpemasukan') }}">Kategori Pemasukan</a></li>
-                <li><a class="dropdown-item" href="#">Kategori Pengeluaran</a></li>
+                <li><a class="dropdown-item" href="{{ url('/kpengeluaran') }}">Kategori Pengeluaran</a></li>
 
             </ul>
         </li>
