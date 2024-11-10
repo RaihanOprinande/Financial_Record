@@ -8,29 +8,20 @@
             Dashboard
           </a>
         </li>
-        <li class="nav-item dropdown">
-            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="{{ url('/pemasukan') }}">
                 <i class="bi bi-file-earmark-arrow-down"></i>
-                Pemasukan
-            </button>
-            <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="{{ url('/pemasukan') }}">Pemasukan Harian</a></li>
-                <li><a class="dropdown-item" href="#">Pemasukan Bulanan</a></li>
-                <li><a class="dropdown-item" href="#">Laporan Pemasukan</a></li>
-            </ul>
+              Pemasukan
+            </a>
         </li>
-        <li class="nav-item dropdown">
-            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-file-earmark-arrow-down"></i>
-                Pengeluaran
-            </button>
-            <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">Pemasukan Harian</a></li>
-                <li><a class="dropdown-item" href="#">Pemasukan Bulanan</a></li>
-                <li><a class="dropdown-item" href="#">Laporan Pemasukan</a></li>
-            </ul>
+        <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="{{ url('/pengeluaran') }}">
+                <i class="bi bi-file-earmark-arrow-up"></i>
+              pengeluaran
+            </a>
         </li>
-        <li class="nav-item dropdown">
+
+        <li class="nav-item dropdown ms-1">
             <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-file-earmark-arrow-down"></i>
                 Kategori
@@ -40,13 +31,6 @@
                 <li><a class="dropdown-item" href="{{ url('/kpengeluaran') }}">Kategori Pengeluaran</a></li>
 
             </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('/dsn-index') }}">
-            <span data-feather="shopping-cart"></span>
-            <i class="bi bi-database-fill"></i>
-            Laporan
-          </a>
         </li>
         <hr style="color: white">
         <li class="nav-item ml-2">

@@ -11,6 +11,27 @@
 
 <a href="/pemasukan/create" class="btn btn-primary mb-2">Add Pemasukan</a>
 
+<form method="GET" action="{{ url('/pemasukan') }}" class="mb-3">
+    <div class="row">
+        <div class="col-md-4">
+            <select name="kategori_id" class="form-select">
+                <option value="">Pilih Kategori</option>
+                @foreach ($kpemasukan as $kategori)
+                    <option value="{{ $kategori->id }}" {{ request('kategori_id') == $kategori->id ? 'selected' : '' }}>
+                        {{ $kategori->kategori_pemasukan }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+        <div class="col-md-4">
+            <input type="date" name="tanggal" class="form-control" value="{{ request('tanggal') }}">
+        </div>
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-primary">Filter</button>
+        </div>
+    </div>
+</form>
+
 <table class="table table-bordered">
     <tr>
         <th>No</th>
@@ -41,7 +62,7 @@
         </tr>
     @endforeach
     <tr>
-        <td colspan="4" class="text-end"><strong>TOTAL</strong></td>
+        <td colspan="4" class="text-start"><strong>TOTAL</strong></td>
         <td>Rp {{ number_format($total, 0, ',', '.') }}</td>
         <td></td>
     </tr>

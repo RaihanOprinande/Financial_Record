@@ -8,11 +8,21 @@ use Illuminate\Http\Request;
 
 class PemasukanController extends Controller
 {
-    public function index(){
-        $pemasukan = Pemasukan::latest()->paginate(10);
+    public function index(Request $request){
+        $query = Pemasukan::query();
+
+        if ($request->filled('kategori_id')) {
+            $query->where('kategori_id', $request->kategori_id);
+        }
+
+        if ($request->filled('tanggal')) {
+            $query->whereDate('tanggal', $request->tanggal);
+        }
+        // $pemasukan = Pemasukan::latest()->paginate(10);
+        $pemasukans = $query->with('kategori')->paginate(10);
         $kategori = KategoriPemasukan::latest()->paginate(10);
-        $total = Pemasukan::sum('jumlah');
-        return view('Features.pemasukan.pemasukan',['pemasukans'=>$pemasukan,'kpemasukan'=>$kategori,'total'=>$total]);
+        $total = $query->sum('jumlah');
+        return view('Features.pemasukan.pemasukan',['pemasukans'=>$pemasukans,'kpemasukan'=>$kategori,'total'=>$total]);
     }
 
     public function create(){
