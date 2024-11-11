@@ -1,5 +1,7 @@
 <h1>Financial Record</h1>
 Adalah website yang dirancang untuk mencatat pengeluaran dan pemasukan anda <br>
+email : admin@gmail.com <br>
+password : 1234
 <h3>Alur kerja</h3>
 <li>login & Register</li>
 User akan diarahkan ke halaman login yang meminta input email dan password. Jika user belum memiliki akun maka ada opsi untuk penambahan akun yang meminta input nama,email,password
