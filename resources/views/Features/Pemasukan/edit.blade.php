@@ -32,7 +32,7 @@
 
       <div class="mb-3">
         <label for="tanggal" class="form-label">Tanggal</label>
-        <input type="date" class="form-control @error('tanggal') is-invalid @enderror" name="tanggal" id="tanggal" value="{{ old('tanggal') }}">
+        <input type="date" class="form-control @error('tanggal') is-invalid @enderror" name="tanggal" id="tanggal" value="{{ old('tanggal',$editpemasukan->tanggal) }}">
         @error('tanggal')
         <div class="invalid-feedback">
             {{ $message }}
@@ -56,10 +56,4 @@
         <input type="submit" class="btn btn-primary" name="submit">
       </div>
 </form>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('tanggal').value = today;
-    });
-</script>
 @endsection
